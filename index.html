@@ -12,7 +12,7 @@
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Садиба «Ялівець», Орявчик">
 <meta property="og:title" content="«Ялівець» · садиба в Орявчику, біля витягу «Звенів»">
-<meta property="og:description" content="Двоповерховий будинок з персиковим фасадом на пагорбі: шість номерів, камін, альтанка з мангалом, 4,4 у Google за 52 відгуками. До витягу «Звенів» близько 400 метрів.">
+<meta property="og:description" content="Двоповерховий будинок з персиковим фасадом на пагорбі: шість номерів, камін, альтанка з мангалом. До витягу «Звенів» близько 400 метрів.">
 <meta property="og:url" content="https://ananinalist-maker.github.io/proto-yalivets-oryavchyk/">
 <meta property="og:image" content="https://ananinalist-maker.github.io/proto-yalivets-oryavchyk/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -52,7 +52,6 @@
   "checkinTime": "13:00",
   "checkoutTime": "12:00",
   "petsAllowed": false,
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "52", "bestRating": "5" },
   "amenityFeature": [
     { "@type": "LocationFeatureSpecification", "name": "Камін у вітальні", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Альтанка з мангалом", "value": true },
@@ -884,6 +883,14 @@ h2 em{font-size:1.12em}
 .stats dt{font-weight:700}
 .tile figcaption b{font-size:26px}
 .masthead__sub{font-size:.5em}
+.own-mark{position:absolute;z-index:3;left:8px;top:8px;padding:2px 9px 3px;border-radius:8px;background:rgba(255,248,240,.94);font:italic 400 13px/1.3 var(--f-hand);color:var(--ink);pointer-events:none;white-space:nowrap}
+.tile .own-mark{top:21%;left:16px}
+.rooms-ph button .own-mark,.gal button .own-mark{right:auto;bottom:auto;width:auto;max-width:none;left:8px;top:8px;padding:2px 9px 3px;border-radius:8px;background:rgba(255,248,240,.94);font:italic 400 13px/1.3 var(--f-hand);color:var(--ink)}
+.rv{display:block}
+.rv .big-q{margin-bottom:0}
+.tags--solo{margin-top:20px;padding:18px 22px;border-radius:var(--r);background:var(--card);border:1px solid var(--seam)}
+.tags--solo p{margin:0}
+.rating .i{width:16px;height:16px;color:var(--glow)}
 @media (max-width:760px){ .masthead__sub{font-size:.52em} .masthead__flower{width:.46em;height:.9em} }
 </style>
 </head>
@@ -1002,7 +1009,7 @@ h2 em{font-size:1.12em}
     <div class="wrap band__in">
       <div class="masthead">
         <h1 class="masthead__t mh" id="hero-title"><span class="masthead__word">Ялівець<img class="masthead__flower" src="decor/sprig-light.svg" width="48" height="92" alt=""></span><span class="sr">, </span><span class="masthead__sub">садиба в Орявчику</span></h1>
-        <p class="masthead__meta mh mh--2"><span class="masthead__addr"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>урочище Тисовець</span><a class="rating" href="#reviews"><span class="stars" aria-hidden="true"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-starh"/></svg></span><span><b>4,4</b> · 52 відгуки<span class="rating__src"> у Google</span></span></a></p>
+        <p class="masthead__meta mh mh--2"><span class="masthead__addr"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>урочище Тисовець</span><a class="rating" href="#reviews"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg><span>Що пишуть гості</span></a></p>
         <p class="masthead__line mh mh--3">Двоповерховий будинок з персиковим фасадом стоїть на пагорбі майже за тисячу метрів над морем, і з вікон видно лижну трасу. До витягу «Звенів» звідси п'ять хвилин пішки, а довкола тільки хвойний ліс і гори.</p>
       </div>
       <a class="qbm" id="qbMini" href="#qbBar"><span class="qbm__ic" aria-hidden="true"><svg class="i"><use href="#i-calendar"/></svg></span><span class="qbm__t"><b>Вільні дати</b><span id="qbMiniP">2 дорослих</span></span><span class="qbm__go">Обрати<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
@@ -1085,7 +1092,7 @@ h2 em{font-size:1.12em}
       </div>
     </div>
     <dl class="stats" data-rv>
-      <div><dt>4,4</dt><dd>у Google, 52 відгуки<small>Google Maps</small></dd></div>
+      <div><dt>18</dt><dd>гостей у всьому будинку<small>каталог відпочинку</small></dd></div>
       <div><dt>6</dt><dd>номерів на двох поверхах<small>план поверхів, каталоги</small></dd></div>
       <div><dt>960&nbsp;м</dt><dd>над рівнем моря, урочище Тисовець<small>каталог відпочинку</small></dd></div>
       <div><dt>400&nbsp;м</dt><dd>до нижньої станції витягу «Звенів»<small>OpenStreetMap, пішки</small></dd></div>
@@ -1105,8 +1112,8 @@ h2 em{font-size:1.12em}
     <div class="rgrid">
       <article class="room" data-rv>
         <figure class="room__ph">
-          <img src="img/room-dbl.jpg" width="849" height="637" alt="Номер з дерев'яною стелею: широке двоспальне ліжко, велике вікно з білими шторами, за ним зелений схил з лижною трасою" loading="lazy" decoding="async">
-          <figcaption>Фото з оголошення садиби</figcaption>
+          <img src="img/room-dbl.jpg" width="1200" height="900" alt="Номер з дерев'яною підлогою: двоспальне ліжко, комод з телевізором, балконні двері зі світлими шторами, за ними зелень" loading="lazy" decoding="async">
+          <figcaption>Фото господині</figcaption>
         </figure>
         <div class="room__body">
           <p class="room__kicker">для двох</p>
@@ -1194,9 +1201,9 @@ h2 em{font-size:1.12em}
     <div class="rooms-ph" data-rv>
       <button class="js-lb" type="button" data-cap="Вітальня: камін, обкладений каменем, двері й галерея другого поверху"><img src="img/int-fire.jpg" width="750" height="1000" alt="Вітальня з каміном, обкладеним каменем, дерев'яними дверима й галереєю другого поверху над нею" loading="lazy" decoding="async"><span>Вітальня з каміном</span></button>
       <button class="js-lb" type="button" data-cap="Сходи з різьбленими білими вирізами на перилах і панелях"><img src="img/int-stairs.jpg" width="750" height="1000" alt="Дерев'яні сходи, на перилах і панелях білі різьблені вирізи, на стіні картини" loading="lazy" decoding="async"><span>Сходи з різьбленням</span></button>
-      <button class="js-lb" type="button" data-cap="Душова кабіна й умивальник у санвузлі номера"><img src="img/int-bath.jpg" width="480" height="640" alt="Санвузол: душова кабіна зі скляними дверима, умивальник, жовтий рушник" loading="lazy" decoding="async"><span>Санвузол</span></button>
+      <button class="js-lb" type="button" data-cap="Санвузол номера: душова кабіна, умивальник, унітаз і вікно, фото господині"><img src="img/int-bath.jpg" width="751" height="1000" alt="Санвузол: кутова душова кабіна, умивальник, унітаз, рушникосушарка, невелике вікно" loading="lazy" decoding="async"><span>Санвузол</span><span class="own-mark">фото господині</span></button>
       <button class="js-lb" type="button" data-cap="Тераса з геранню й плетеними кріслами"><img src="img/int-terrace.jpg" width="574" height="765" alt="Тераса з великими кущами рожевої й червоної герані та плетеними кріслами біля скляних дверей" loading="lazy" decoding="async"><span>Тераса з геранню</span></button>
-      <p class="pnote" role="note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Фото з оголошення садиби і Google-картки, без прив'язки до номера. У робочій версії поставимо ваші нові знімки кожного номера і підпишемо, де який.</span></p>
+      <p class="pnote" role="note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Фото господині, з оголошення садиби і Google-картки, без прив'язки до номера. У робочій версії поставимо ваші нові знімки кожного номера і підпишемо, де який.</span></p>
     </div>
     <div class="hnotes" data-rv>
       <p><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span>Заїзд з 13:00 до 22:00, виїзд з 12:00 до 13:00. Про час приїзду попередьте заздалегідь.</span></p>
@@ -1215,12 +1222,12 @@ h2 em{font-size:1.12em}
         <p class="eyebrow">двір і тераси</p>
         <h2 id="yard-title">Двір з альтанкою, <em>терасами і гамаком</em></h2>
       </div>
-      <p class="lead">Будинок стоїть серед ялин на великому подвір'ї. Тут є газон з білими лежаками, дві тераси, альтанка з мангалом і гамак під дерев'яним навісом. Взимку з тераси видно засніжену трасу.</p>
+      <p class="lead">Будинок стоїть серед ялин на великому подвір'ї. Тут є газон з білими лежаками, дві тераси, альтанка з мангалом і гамак під дерев'яним навісом. З балкона і тераси видно хребет з лижною трасою.</p>
     </div>
-    <ol class="tiles" aria-label="Двір, тераса і гамак на фото з Google-картки та оголошення садиби" data-rv>
+    <ol class="tiles" aria-label="Двір, балкон і гамак на фото господині, з Google-картки та оголошення садиби" data-rv>
       <li><figure class="tile swing"><img src="img/tile-lawn.jpg" width="825" height="1100" alt="Зелений газон, на ньому білий лежак, позаду ялини і лісисті гори" loading="lazy" decoding="async"><figcaption><b>Газон</b>З лежаками й видом на гори</figcaption></figure></li>
       <li><figure class="tile swing"><img src="img/tile-gazebo.jpg" width="825" height="1100" alt="Альтанка з дерев'яним дахом і мангалом у саду, перед нею дерев'яна лавка і кущі" loading="lazy" decoding="async"><figcaption><b>Альтанка</b>З мангалом у саду</figcaption></figure></li>
-      <li><figure class="tile swing"><img src="img/tile-veranda.jpg" width="825" height="1100" alt="Дерев'яна тераса з плетеним кріслом, за балюстрадою засніжений схил з лижною трасою" loading="lazy" decoding="async"><figcaption><b>Тераса</b>Взимку видно лижну трасу</figcaption></figure></li>
+      <li><figure class="tile swing"><img src="img/tile-balcony.jpg" width="825" height="1100" alt="Дерев'яний балкон з плетеними стільцями і столиком, за перилами зелені дерева, далі хребет з лижною трасою і хмари" loading="lazy" decoding="async"><span class="own-mark">фото господині</span><figcaption><b>Балкон</b>З видом на хребет</figcaption></figure></li>
       <li><figure class="tile swing"><img src="img/tile-hammock.jpg" width="576" height="768" alt="Червоний гамак між деревами під навісом з грубих дерев'яних стовпів, поруч колода-лавка" loading="lazy" decoding="async"><figcaption><b>Гамак</b>Під дерев'яним навісом</figcaption></figure></li>
     </ol>
     <div class="perk__grid">
@@ -1319,21 +1326,23 @@ h2 em{font-size:1.12em}
     <div class="head" data-rv>
       <p class="eyebrow">фото</p>
       <h2 id="gal-title">Будинок, двір і гори <em>на фото господарів і гостей</em></h2>
-      <p class="lead">Вітальня з каміном, двір, тераси, схили над Орявчиком і зимова траса. Знімки з Google-картки та з оголошення садиби.</p>
+      <p class="lead">Вітальня з каміном, двір, тераси, схили над Орявчиком і зимова траса. Знімки господині, з Google-картки та з оголошення садиби.</p>
     </div>
     <div class="gal" id="gal">
       <button class="js-lb w2" type="button" data-cap="Двір з альтанкою і помостом"><img src="img/g-yard.jpg" width="1400" height="787" alt="Двір з альтанкою: газон, дерев'яний помост, ялини і лісисті гори вдалині" loading="lazy" decoding="async"></button>
-      <button class="js-lb" type="button" data-cap="Різьблені вирізи на панелях"><img src="img/g-door.jpg" width="1200" height="900" alt="Коридор з дерев'яними дверима, на панелях білі різьблені вирізи" loading="lazy" decoding="async"></button>
-      <button class="js-lb h2" type="button" data-cap="Альтанка в снігу"><img src="img/g-snow.jpg" width="750" height="1000" alt="Засніжена альтанка на передньому плані, за нею біла лижна траса на лісистому схилі" loading="lazy" decoding="async"></button>
-      <button class="js-lb" type="button" data-cap="Вид з двору"><img src="img/g-view.jpg" width="1200" height="900" alt="Вид з двору: берези, дорога внизу, лісисті гори і хмари, на передньому плані ліхтар-куля" loading="lazy" decoding="async"></button>
-      <button class="js-lb w2" type="button" data-cap="Вітальня з каміном і сходами"><img src="img/g-living.jpg" width="1200" height="900" alt="Вітальня з дерев'яними сходами, різьбленими перилами, телевізором і каміном з каменю" loading="lazy" decoding="async"></button>
-      <button class="js-lb w2" type="button" data-cap="Ялини й гори"><img src="img/g-firs.jpg" width="1200" height="900" alt="Ялини на тлі гір і синього неба" loading="lazy" decoding="async"></button>
-      <button class="js-lb h2" type="button" data-cap="Лежаки біля будинку"><img src="img/g-loungers.jpg" width="750" height="1000" alt="Білі лежаки на газоні біля стіни будинку, позаду ялини й гори" loading="lazy" decoding="async"></button>
-      <button class="js-lb h2" type="button" data-cap="Ялини в снігу й лижна траса"><img src="img/g-spruce.jpg" width="750" height="1000" alt="Ялини в снігу й лижна траса на схилі під синім небом" loading="lazy" decoding="async"></button>
       <button class="js-lb h2" type="button" data-cap="Вечірній туман над долиною"><img src="img/g-mist.jpg" width="750" height="1000" alt="Вечірній туман над долиною, темні ялини і лілове небо" loading="lazy" decoding="async"></button>
-      <button class="js-lb h2" type="button" data-cap="Зима з тераси"><img src="img/g-balcony.jpg" width="750" height="1000" alt="Засніжені ялини і гори, вид з тераси" loading="lazy" decoding="async"></button>
       <button class="js-lb h2" type="button" data-cap="Кипрей на пагорбі"><img src="img/g-flowers.jpg" width="750" height="1000" alt="Кипрей з рожевими квітами на пагорбі, вдалині гори" loading="lazy" decoding="async"></button>
+      <button class="js-lb" type="button" data-cap="Вид з двору"><img src="img/g-view.jpg" width="1200" height="900" alt="Вид з двору: берези, дорога внизу, лісисті гори і хмари, на передньому плані ліхтар-куля" loading="lazy" decoding="async"></button>
       <button class="js-lb h2" type="button" data-cap="Схил над селом восени"><img src="img/g-autumn.jpg" width="750" height="1000" alt="Схил з лижною трасою над селом, жовтіючі дерева, хмарне небо" loading="lazy" decoding="async"></button>
+      <button class="js-lb h2" type="button" data-cap="Будинок восени серед лісу, фото господині"><img src="img/g-own-house.jpg" width="750" height="1000" alt="Будинок з бордовим дахом серед жовтіючого лісу на схилі, видно з протилежного пагорба" loading="lazy" decoding="async"><span class="own-mark">фото господині</span></button>
+      <button class="js-lb h2" type="button" data-cap="Тераса взимку"><img src="img/tile-veranda.jpg" width="825" height="1100" alt="Дерев'яна тераса з плетеним кріслом, за балюстрадою засніжений схил з лижною трасою" loading="lazy" decoding="async"></button>
+      <button class="js-lb h2" type="button" data-cap="Лежаки біля будинку"><img src="img/g-loungers.jpg" width="750" height="1000" alt="Білі лежаки на газоні біля стіни будинку, позаду ялини й гори" loading="lazy" decoding="async"></button>
+      <button class="js-lb h2" type="button" data-cap="Альтанка в снігу"><img src="img/g-snow.jpg" width="750" height="1000" alt="Засніжена альтанка на передньому плані, за нею біла лижна траса на лісистому схилі" loading="lazy" decoding="async"></button>
+      <button class="js-lb" type="button" data-cap="Ялини й гори"><img src="img/g-firs.jpg" width="1200" height="900" alt="Ялини на тлі гір і синього неба" loading="lazy" decoding="async"></button>
+      <button class="js-lb w2 w2d" type="button" data-cap="Вітальня з каміном і сходами"><img src="img/g-living.jpg" width="1200" height="900" alt="Вітальня з дерев'яними сходами, різьбленими перилами, телевізором і каміном з каменю" loading="lazy" decoding="async"></button>
+      <button class="js-lb w2 w2d" type="button" data-cap="Різьблені вирізи на панелях"><img src="img/g-door.jpg" width="1200" height="900" alt="Коридор з дерев'яними дверима, на панелях білі різьблені вирізи" loading="lazy" decoding="async"></button>
+      <button class="js-lb h2" type="button" data-cap="Зима з тераси"><img src="img/g-balcony.jpg" width="750" height="1000" alt="Засніжені ялини і гори, вид з тераси" loading="lazy" decoding="async"></button>
+      <button class="js-lb h2" type="button" data-cap="Ялини в снігу й лижна траса"><img src="img/g-spruce.jpg" width="750" height="1000" alt="Ялини в снігу й лижна траса на схилі під синім небом" loading="lazy" decoding="async"></button>
       <button class="js-lb w2 w2d" type="button" data-cap="Берези й долина влітку"><img src="img/g-pavilion.jpg" width="1400" height="787" alt="Дерев'яна альтанка і берези над зеленою долиною, вдалині гори" loading="lazy" decoding="async"></button>
     </div>
     <p class="gal__hint">Натисніть на фото, щоб розгорнути.</p>
@@ -1400,37 +1409,27 @@ h2 em{font-size:1.12em}
   <div class="wrap">
     <div class="head" data-rv>
       <p class="eyebrow">відгуки</p>
-      <h2 id="rev-title">4,4 з 5 у Google <em>за 52 відгуками</em></h2>
-      <p class="lead">З 52 відгуків у Google 36 мають п'ять зірок. Гості пишуть передусім про господарів, далі про чистоту, двір і гори навколо.</p>
+      <h2 id="rev-title">Що пишуть гості <em>після відпочинку</em></h2>
+      <p class="lead">Гості найчастіше згадують господарів, чистоту, двір і гори навколо. Ось що вони пишуть.</p>
     </div>
     <div class="rv" data-rv>
-      <div class="score">
-        <p class="score__src"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg>оцінка в Google</p>
-        <div class="score__top"><span class="score__num">4,4</span><span class="score__of">з 5 · 52 відгуки</span></div>
-        <ul class="bars" aria-label="Розподіл оцінок у Google">
-          <li><span>5 ★</span><span class="t"><i style="--w:69.2%"></i></span><span class="v">36</span></li>
-          <li><span>4 ★</span><span class="t"><i style="--w:15.4%"></i></span><span class="v">8</span></li>
-          <li><span>3 ★</span><span class="t"><i style="--w:5.8%"></i></span><span class="v">3</span></li>
-          <li><span>2 ★</span><span class="t"><i style="--w:3.8%"></i></span><span class="v">2</span></li>
-          <li><span>1 ★</span><span class="t"><i style="--w:5.8%"></i></span><span class="v">3</span></li>
-        </ul>
-        <div class="tags">
-          <p>Про що пишуть гості</p>
-          <ul>
-            <li><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>привітні господарі</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-broom"/></svg>чисто й охайно</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-peak"/></svg>вид на гори</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-cup"/></svg>сніданки</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-ski"/></svg>лижна траса поруч</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-grill"/></svg>мангал і альтанка</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-home"/></svg>великий двір</li>
-          </ul>
-        </div>
-      </div>
       <blockquote class="big-q">
         <p>«Відчули позитивну енергетику цього прекрасного закладу та турботу і доброзичливість господарів садиби Ялівець!»</p>
         <footer><b>Oksana Slinko</b>Google, 5 з 5, 3 роки тому</footer>
       </blockquote>
+    <div class="tags tags--solo">
+      <p>Про що пишуть гості</p>
+      <ul>
+        <li><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>привітні господарі</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-broom"/></svg>чисто й охайно</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-peak"/></svg>вид на гори</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-cup"/></svg>сніданки</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-ski"/></svg>лижна траса поруч</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-grill"/></svg>мангал і альтанка</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-home"/></svg>великий двір</li>
+      </ul>
+    </div>
+
     </div>
     <div class="quotes">
       <blockquote class="q" data-rv><p>«Чудове місце, привітні господарі!»</p><footer><b>Наталія Дячок</b><span>Google · 5 з 5 · 7 років тому</span></footer></blockquote>
@@ -1438,7 +1437,7 @@ h2 em{font-size:1.12em}
       <blockquote class="q" data-rv><p>«Господарі здалися неконфліктними, завжди радо відповідали на всі питання і надавали корисні поради.»</p><footer><b>Petro Sherstiuk</b><span>Google · 5 з 5 · 4 роки тому</span></footer></blockquote>
       <blockquote class="q" data-rv><p>«…великий двір, чудові фотозони»</p><footer><b>Нина Щербань</b><span>Google · 5 з 5 · 6 років тому</span></footer></blockquote>
     </div>
-    <p class="reviews__fine">Цитати наведено дослівно, деякі скорочено. Оцінка станом на 15.10.2026.</p>
+    <p class="reviews__fine">Цитати наведено дослівно, деякі скорочено. Відгуки гостей у Google, станом на 15.10.2026.</p>
   </div>
 </section>
 
@@ -1659,9 +1658,9 @@ h2 em{font-size:1.12em}
       </div>
     </div>
     <div class="foot__credits">
-      <p>Фото будинку, вітальні, двору й околиць: знімки господарів і гостей з Google-картки та з оголошення садиби. Настроєве відео на першому екрані зібране для прототипу.</p>
+      <p>Фото будинку, вітальні, двору й околиць: знімки господарів і гостей з Google-картки та з оголошення садиби, а також фото господині (номер, санвузол, балкон, будинок восени). Настроєве відео на першому екрані зібране для прототипу.</p>
       <p>Номери, правила й послуги: правила проживання і каталоги відпочинку. Про Орявчик і Сколівські Бескиди: Вікіпедія. Відстані: маршрути OpenStreetMap.</p>
-      <p>Оцінка й цитати: відгуки гостей у Google, станом на 15.10.2026.</p>
+      <p>Цитати: відгуки гостей у Google, станом на 15.10.2026.</p>
       <p>Прототип сайту садиби «Ялівець», Орявчик, зібраний за відкритими даними. Це не офіційний сайт.</p>
     </div>
   </div>
