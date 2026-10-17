@@ -444,6 +444,20 @@ button,input,select,textarea{font:inherit;color:inherit}
 .season li b{min-width:62px}
 .gal .gal__own{position:relative}
 
+/* для груп: глава з розмитим тлом, список фактів */
+.chap--grupy{min-height:min(96vh, 900px)}
+.chap--grupy::after{background:linear-gradient(180deg, rgba(20,16,18,.35) 0%, rgba(20,16,18,.62) 45%, rgba(20,16,18,.88) 100%)}
+.grupy__lead{font-size:clamp(17px, 1.6vw, 19px);max-width:34ch;margin:18px 0 0;text-shadow:0 1px 12px rgba(0,0,0,.3)}
+.grupy__list{list-style:none;margin:0 0 22px;padding:0}
+.grupy__list li{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-top:1px solid rgba(255,255,255,.22);font-size:16px;line-height:1.45}
+.grupy__list b{font:700 12.5px/1.4 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:#F2CD80}
+.chap--grupy .btn{margin-top:6px}
+.grupy__note{font-size:14px;opacity:.85;margin:10px 0 0}
+@media (max-width: 860px){ .chap--grupy{padding-top:34vh} }
+/* відео господині в галереї */
+.gal__vid{position:relative;margin:0 0 14px;break-inside:avoid;border-radius:2px;overflow:hidden;background:#2a2a2a}
+.gal__vid video{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+
 </style>
 </head>
 <body>
@@ -482,8 +496,8 @@ button,input,select,textarea{font:inherit;color:inherit}
     </a>
     <nav class="nav" aria-label="Розділи">
       <a href="#nomery">Номери</a>
+      <a href="#grupy">Для груп</a>
       <a href="#dvir">Двір</a>
-      <a href="#kamin">Вітальня</a>
       <a href="#lyzhi">Лижі</a>
       <a href="#doroga">Як доїхати</a>
     </nav>
@@ -497,6 +511,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     <a href="#dvir">Двір</a>
     <a href="#kamin">Вітальня з каміном</a>
     <a href="#nomery">Номери</a>
+    <a href="#grupy">Для груп</a>
     <a href="#lyzhi">Лижі поруч</a>
     <a href="#sezony">Зима і літо</a>
     <a href="#vidguky">Відгуки</a>
@@ -619,10 +634,11 @@ button,input,select,textarea{font:inherit;color:inherit}
       <div class="rooms">
         <article class="room rv">
           <div class="room__ph"><div class="room__sl">
-            <button type="button" data-lb="img/nomer-dvi.webp" data-cap="Номер для двох, фото господині"><img src="img/nomer-dvi-s.webp" alt="Номер з двоспальним ліжком, комодом і балконними дверима" loading="lazy" width="570" height="760"><span class="own">фото господині</span></button>
-            <button type="button" data-lb="img/nomer-dvi-2.webp" data-cap="Номер для двох"><img src="img/nomer-dvi-2-s.webp" alt="Двоспальне ліжко, полиці й столик біля вікна" loading="lazy" width="503" height="670"></button>
+            <button type="button" data-lb="img/nomer-dvi.webp" data-cap="Номер з балконними дверима, фото господині"><img src="img/nomer-dvi-s.webp" alt="Номер з двоспальним ліжком, комодом і балконними дверима" loading="lazy" width="570" height="760"><span class="own">фото господині</span></button>
+            <button type="button" data-lb="img/nomer-balkon.webp" data-cap="Номер з видом на гори, фото господині"><img src="img/nomer-balkon-s.webp" alt="Двоспальне ліжко, столик і відчинені двері на балкон, за ними ліс на схилі" loading="lazy" width="570" height="760"><span class="own">фото господині</span></button>
+            <button type="button" data-lb="img/nomer-vikno.webp" data-cap="Номер з широким вікном, фото господині"><img src="img/nomer-vikno-s.webp" alt="Двоспальне ліжко, журнальний столик і широке вікно зі світлими шторами" loading="lazy" width="570" height="760"><span class="own">фото господині</span></button>
             <button type="button" data-lb="img/vanna-2.webp" data-cap="Санвузол, фото господині"><img src="img/vanna-2-s.webp" alt="Санвузол з душовою кабіною і умивальником" loading="lazy" width="633" height="760"><span class="own">фото господині</span></button>
-          </div><div class="room__dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div></div>
+          </div><div class="room__dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div></div>
           <div class="room__b">
             <h3>Номер для двох</h3>
             <p>Широке двоспальне ліжко, комод з телевізором, журнальний столик і свій санвузол. В одному з трьох таких номерів є балкон.</p>
@@ -657,7 +673,30 @@ button,input,select,textarea{font:inherit;color:inherit}
           </div>
         </article>
       </div>
-      <p class="rooms__note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Фото номерів з оголошення садиби і від господині, без прив'язки до конкретного номера. У робочій версії поставимо нові знімки кожного номера й підпишемо, де який.</span></p>
+      <p class="rooms__note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Фото номерів від господині й з оголошення садиби, поки без прив'язки до конкретного номера. У робочій версії підпишемо, де який номер.</span></p>
+    </div>
+  </section>
+
+  <section class="chap chap--grupy" id="grupy" aria-labelledby="grupyH">
+    <div class="chap__img"><img src="img/grupa-tlo-s.webp" srcset="img/grupa-tlo-s.webp 760w, img/grupa-tlo.webp 1600w" sizes="100vw" alt="" loading="lazy" width="760" height="568"></div>
+    <div class="wrap chap__in">
+      <div class="rv">
+        <p class="kick">Для груп</p>
+        <h2 class="h2" id="grupyH">Весь будинок <em>для вашої компанії</em></h2>
+        <p class="grupy__lead">Для кількох сімей, компанії друзів чи команди будинок можна взяти цілком, до 18 гостей.</p>
+      </div>
+      <div class="chap__txt rv">
+        <ul class="grupy__list">
+          <li><b>6 номерів</b>три для двох і три на чотирьох, у кожному свій санвузол</li>
+          <li><b>Вітальня з каміном</b>і їдальня з дерев'яними столами, де всі сідають разом</li>
+          <li><b>Двір</b>альтанка з мангалом, гамак і газон з лежаками</li>
+          <li><b>Кухня в цоколі</b>як нею користуватися, домовтеся з пані Наталею</li>
+          <li><b>Паркування</b>на території</li>
+        </ul>
+        <p class="quote-mini">«Відпочивали другий рік спортивною командою. … З радістю приїдемо знову і знову.»<span>Ніна, відгук у Google</span></p>
+        <a class="btn btn--light" href="#bron" data-pick="budynok">Запитати про весь будинок</a>
+        <p class="grupy__note">Ціну за весь будинок на ваші дати назве пані Наталя.</p>
+      </div>
     </div>
   </section>
 
@@ -764,6 +803,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         <h2 class="h2">Садиба <em>в різну пору</em></h2>
       </div>
       <div class="gal rv">
+        <figure class="gal__vid"><video id="ownV" muted playsinline loop preload="none" poster="video/owner_poster.jpg" aria-label="Відео господині: ранковий туман над долиною, церква на схилі, садиба серед лісу" width="320" height="400"><source src="video/owner_320x400.mp4" type="video/mp4"></video><span class="own">відео господині</span></figure>
         <button type="button" data-lb="img/dim-osin.webp" data-cap="Садиба восени"><img src="img/dim-osin-s.webp" alt="Будинок з бордовим дахом серед жовтих дерев" loading="lazy" width="760" height="613"></button>
         <button type="button" class="gal__own" data-lb="img/dim-vlasnyk.webp" data-cap="Садиба восени, фото господині"><img src="img/dim-vlasnyk-s.webp" alt="Будинок з бордовим дахом серед осіннього лісу, фото господині" loading="lazy" width="570" height="760"><span class="own">фото господині</span></button>
         <button type="button" data-lb="img/nich-skhody.webp" data-cap="Зимовий вечір біля входу"><img src="img/nich-skhody-s.webp" alt="Засніжені сходи до будинку ввечері, ялини в снігу" loading="lazy" width="503" height="670"></button>
@@ -796,8 +836,8 @@ button,input,select,textarea{font:inherit;color:inherit}
           <figcaption><b>Оксана</b>відгук у Google</figcaption>
         </figure>
         <figure class="rev rv">
-          <blockquote>Відпочивали другий рік спортивною командою. … З радістю приїдемо знову і знову.</blockquote>
-          <figcaption><b>Ніна</b>відгук у Google</figcaption>
+          <blockquote>Чудове місце, привітні господарі!</blockquote>
+          <figcaption><b>Наталія</b>відгук у Google</figcaption>
         </figure>
         <figure class="rev rv">
           <blockquote>Дуже приємні господарі … Відпочинок як для двох так і для сім'ї просто супер!</blockquote>
@@ -936,6 +976,7 @@ button,input,select,textarea{font:inherit;color:inherit}
       <div class="faq rv">
         <details><summary>Як забронювати номер у садибі «Ялівець»?</summary><p>Оберіть дати в календарі й натисніть «Написати у Viber з цими датами» або залиште заявку. Пані Наталя відповість, чи вільно, і назве ціну. Можна й просто подзвонити: <a class="link" href="tel:+380679331143">+380 67 933 11 43</a>.</p></details>
         <details><summary>Які є номери?</summary><p>Шість номерів на двох поверхах: три для двох (15 м²) і три на чотирьох (24-25 м²), з них два двокімнатні. Можна взяти один номер або весь будинок до 18 гостей.</p></details>
+        <details><summary>Чи можна приїхати великою компанією?</summary><p>Так, будинок можна взяти цілком: шість номерів, до 18 гостей, вітальня з каміном, їдальня й альтанка з мангалом. Ціну за весь будинок на ваші дати назве пані Наталя.</p></details>
         <details><summary>Далеко до витягів?</summary><p>До нижньої станції бугельного витягу «Звенів» близько 400 метрів пішки, це п'ять хвилин. До курорту Плай близько 17 хвилин машиною.</p></details>
         <details><summary>А харчування?</summary><p>Пані Наталя готує сніданки на замовлення, за окрему плату. У цоколі є кухня для гостей, як нею користуватися, домовтеся з господинею. До найближчого кафе й магазину близько ста метрів.</p></details>
         <details><summary>Чи можна з дітьми?</summary><p>Так, діти будь-якого віку, до 2 років без окремого місця безкоштовно. Біля витягу пологий схил, де на лижі стають і діти.</p></details>
@@ -967,13 +1008,14 @@ button,input,select,textarea{font:inherit;color:inherit}
         <h3>Розділи</h3>
         <ul>
           <li><a href="#nomery">Номери</a></li>
+          <li><a href="#grupy">Для груп</a></li>
           <li><a href="#kamin">Вітальня з каміном</a></li>
           <li><a href="#doroga">Як доїхати</a></li>
           <li><a href="#bron">Бронювання</a></li>
         </ul>
       </div>
     </div>
-    <p class="foot__fine">Прототип сайту садиби «Ялівець», зібраний з відкритих даних. Це ще не офіційний сайт. Фото: знімки садиби з оголошення на karpaty.info і з Google-картки, фото господині. Відео на першому екрані настроєве, з безкоштовного стоку Pexels, знято не біля садиби. Відгуки дослівні, з Google. Ціни й умови бронювання уточнюються з господарями.</p>
+    <p class="foot__fine">Прототип сайту садиби «Ялівець», зібраний з відкритих даних. Це ще не офіційний сайт. Фото: знімки садиби з оголошення на karpaty.info і з Google-картки, фото й відео господині. Відео на першому екрані настроєве, з безкоштовного стоку Pexels, знято не біля садиби. Відгуки дослівні, з Google. Ціни й умови бронювання уточнюються з господарями.</p>
   </div>
 </footer>
 
@@ -1043,6 +1085,15 @@ button,input,select,textarea{font:inherit;color:inherit}
       else { userPaused = true; v.pause(); vBtn.setAttribute('aria-label', 'Увімкнути відео'); vBtn.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-play"/></svg>'; }
     });
   } else { ready(); }
+
+  /* відео господині в галереї: грає без звуку, коли видно, і зупиняється, коли ні */
+  var ownV = $('ownV');
+  if (ownV) {
+    if (io && !reduce && !saveData) {
+      ownV.preload = 'metadata';
+      new IntersectionObserver(function(en){ if (en[0].isIntersecting) { var p = ownV.play(); if (p && p.catch) p.catch(function(){}); } else ownV.pause(); }, { threshold: .4 }).observe(ownV);
+    } else { ownV.controls = true; }
+  }
 
   /* нижня панель на телефоні: видно між першим екраном і бронюванням */
   var mbar = $('mbar'), heroIn = true, bronIn = false;
